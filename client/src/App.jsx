@@ -34,6 +34,15 @@ export default function App() {
   }, []);
 
   return (
+    <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '1rem',
+        fontFamily: 'Arial, sans-serif',
+        maxWidth: '100%',
+        overflowX: 'auto'
+    }}>
+
     <div className="p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">
         📊 Swing Trade Signals
