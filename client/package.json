@@ -1,8 +1,6 @@
 {
-  "name": "swing-trade-app",
+  "name": "swing-trade-client",
   "version": "1.0.0",
-  "description": "Swing Trade Signals App",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,10 +9,11 @@
   "dependencies": {
     "axios": "^1.6.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recharts": "^2.9.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
-    "vite": "^4.4.9"
+    "vite": "^5.0.0"
   }
 }
