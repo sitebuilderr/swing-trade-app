@@ -1,5 +1,5 @@
 {
-  "name": "swing-client",
+  "name": "swing-trade-signals",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,13 +7,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.6.7",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recharts": "^2.9.0"
+    "recharts": "^2.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
-    "vite": "^5.0.0"
+    "vite": "^4.3.9"
   }
 }
