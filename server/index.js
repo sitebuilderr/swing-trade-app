@@ -1,1 +1,2 @@
-<REDACTED: too long for inline code block>
+
+// The actual index.js content will be restored separately.
