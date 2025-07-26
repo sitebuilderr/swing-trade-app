@@ -1,3 +1,4 @@
+
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -17,7 +18,6 @@ async function fetchHistoricalPrices(symbol) {
     symbol,
     timestamps: prices.timestamp,
     closes: prices.indicators.quote[0].close,
-    volumes: prices.indicators.quote[0].volume,
   };
 }
 
@@ -44,8 +44,6 @@ function calculateIndicators(data) {
   const chartData = data.timestamps.map((t, i) => ({
     date: new Date(t * 1000).toISOString().split("T")[0],
     price: data.closes[i],
-    ema20: ema20[i - (data.closes.length - ema20.length)],
-    ema50: ema50[i - (data.closes.length - ema50.length)],
   })).slice(-60);
 
   return {
