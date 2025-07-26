@@ -21,6 +21,7 @@ export default function App() {
     setLoading(true);
     try {
       const response = await axios.get(`${API_URL}/api/swing-signals`);
+      console.log("Signals from API:", response.data); // Debug log
       setSignals(response.data);
     } catch (error) {
       console.error("Error fetching signals:", error);
@@ -34,15 +35,6 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        padding: '1rem',
-        fontFamily: 'Arial, sans-serif',
-        maxWidth: '100%',
-        overflowX: 'auto'
-    }}>
-
     <div className="p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">
         📊 Swing Trade Signals
@@ -57,7 +49,7 @@ export default function App() {
         </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {signals.map((signal) => (
+        {Array.isArray(signals) && signals.map((signal) => (
           <div
             key={signal.symbol}
             className="bg-white border border-gray-200 p-4 rounded-lg shadow-md hover:shadow-lg transition"
